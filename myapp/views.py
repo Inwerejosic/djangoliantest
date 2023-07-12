@@ -17,12 +17,14 @@ def home(request):
     # return HttpResponse(content) 
     return HttpResponse('<h1>Welcome to Little Lemon</h1>')
 
-def drinks(request, drink_name):
+def drinks(request,): #drink_name):
     drink = {
         'mocha':'Type of Coffee',
         'tea':'Type of hot beverage',
         'lemonade':'Type of refreshment',
     }
-    choice_of_drink = drink[drink_name]
-    return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
+    # choice_of_drink = drink[drink_name]
+    zx_type = type(drink)
+    # return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
+    return HttpResponse(f"<h1>{zx_type}</h1>")
 
